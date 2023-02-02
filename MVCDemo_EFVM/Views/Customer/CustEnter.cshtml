@@ -1,0 +1,28 @@
+﻿@model MVCDemo_EFVM.ViewModel.CustViewModel
+    @using MVCDemo_EFVM.Models;
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>CustEnter</title>
+</head>
+<body>
+    <div>
+        @using (Html.BeginForm("submit", "Customer", FormMethod.Post))
+        {
+            <i>Customer ID:</i>@Html.TextBoxFor(m => m.customer.CustId) <br />
+            <i>Customer Name:</i>            @Html.TextBoxFor(m => m.customer.Custname)
+            <input id="Submit1" type="submit" value="submit" />
+
+        }
+        <br/>
+        @*@Html.Partial("ListCustomer",Model)*@
+    </div>
+</body>
+</html>

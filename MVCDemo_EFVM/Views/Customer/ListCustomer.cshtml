@@ -1,0 +1,33 @@
+﻿@model MVCDemo_EFVM.ViewModel.CustViewModel
+    @using MVCDemo_EFVM.Models
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ListCustomer</title>
+</head>
+<body>
+    <div> 
+        <table>
+            <tr>
+                <td>Customer Code</td>
+                <td>Customer Name</td>
+            </tr>
+            @foreach(Customer c in Model.Lcustomers)
+            {
+                <tr>
+                    <td>@c.CustId</td>
+                    <td>@c.Custname</td>
+                </tr>
+            }
+            
+        </table>
+    </div>
+</body>
+</html>
